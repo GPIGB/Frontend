@@ -3,11 +3,61 @@
   <head>
     <meta charset="utf-8">
     <title>YORBIN</title>
+    <style>
+      #map {
+        height: 80%;
+        margin : 10;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <h1>You can recycle {{material}} here:</h1>
     <div class="gmap">
       <!--ENTER GMAP STUFF HERE-->
+      <div id="map"></div>
+      <script>
+  			var map, infoWindow;
+  			function initMap() {
+  				map = new google.maps.Map(document.getElementById('map'), {
+  					center: {lat: 53.959933, lng: -1.087246},
+  					zoom: 14
+  				});
+  			}
+
+  			infoWindow = new google.maps.InfoWindow;
+
+  			// Try HTML5 geolocation.
+  			if (navigator.geolocation) {
+  				navigator.geolocation.getCurrentPosition(function(position) {
+  					var pos = {
+  						lat: position.coords.latitude,
+  						lng: position.coords.longitude
+  					};
+
+  					infoWindow.setPosition(pos);
+  					infoWindow.setContent('Location found.');
+  					infoWindow.open(map);
+  					map.setCenter(pos);
+  				}, function() {
+  					handleLocationError(true, infoWindow, map.getCenter());
+  				});
+  			} else {
+  				// Browser doesn't support Geolocation
+  				handleLocationError(false, infoWindow, map.getCenter());
+  			}
+
+  			function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  				infoWindow.setPosition(pos);
+  				infoWindow.setContent(browserHasGeolocation ?
+                      'Error: The Geolocation service failed.' :
+                      'Error: Your browser doesn\'t support geolocation.');
+  				infoWindow.open(map);
+  			}
+  		</script>
+  		<script async defer
+  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbVE4MVq8YgyGRI4DCGDUcO8Y3hZgW29Q&callback=initMap">
+  		</script>
     </div>
     <button id = "find-me">Show my location</button><br/>
     <p id = "status"></p>
