@@ -20,11 +20,11 @@
   			var map, infoWindow;
 
         var customLabel = {
-          restaurant: {
-            label: 'R'
+          'recycling': {
+            url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
           },
-          bar: {
-            label: 'B'
+          'general waste': {
+            url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
           }
         };
 
@@ -61,7 +61,6 @@
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
               var id = markerElem.getAttribute('id');
-              var name = markerElem.getAttribute('name');
               var address = markerElem.getAttribute('address');
               var type = markerElem.getAttribute('type');
               var point = new google.maps.LatLng(
@@ -70,7 +69,7 @@
 
               var infowincontent = document.createElement('div');
               var strong = document.createElement('strong');
-              strong.textContent = name
+              strong.textContent = type
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
 
@@ -81,7 +80,7 @@
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                label: icon.label
+                icon: icon.url
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
