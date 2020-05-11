@@ -12,7 +12,7 @@ var customLabel = {
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 53.959933, lng: -1.087246},
-    zoom: 14
+    zoom: 15
   });
   infoWindow = new google.maps.InfoWindow;
 
@@ -47,25 +47,25 @@ function initMap() {
       var point = new google.maps.LatLng(
           parseFloat(markerElem.getAttribute('lat')),
           parseFloat(markerElem.getAttribute('lng')));
+      var url = markerElem.getAttribute('url');
 
-      var infowincontent = document.createElement('div');
-      var strong = document.createElement('strong');
-      strong.textContent = type
-      infowincontent.appendChild(strong);
-      infowincontent.appendChild(document.createElement('br'));
+      var contentString = '<div id="content"><b>' + type
+            + '</b><div id="bodyContent">'+ address
+            + '<p><a href=' + url
+            + '>View on Google Maps</a></p></div></div>';
 
-      var text = document.createElement('text');
-      text.textContent = address
-      infowincontent.appendChild(text);
       var icon = customLabel[type] || {};
       var marker = new google.maps.Marker({
         map: map,
         position: point,
-        icon: icon.url
+        icon: icon.url,
       });
       marker.addListener('click', function() {
-        infoWindow.setContent(infowincontent);
+        infoWindow.setContent(contentString);
         infoWindow.open(map, marker);
+        map.setCenter(marker.getPosition());
+        map.setZoom(19);
+
       });
     });
   });
