@@ -3,33 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>YORBIN</title>
-    <style>
-      #map {
-        height: 80%;
-        margin : 10;
-        padding: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="customerview.css">
   </head>
   <body>
-    <h1>You can recycle {{material}} here:</h1>
+    <h1 id='h1'>You can recycle {{material}} here:</h1>
+    <div class = "buttonpane">
+    <img id = paper class = "buttonchoice" src="icons/paper.png"></button>
+    <img id = plastic class = "buttonchoice" src="icons/plastic.png"></button>
+    <img id = general class = "buttonchoice" src="icons/general.png"></button>
+  </div>
     <div class="gmap">
       <!--ENTER GMAP STUFF HERE-->
-      <div id="map"></div>
-
-      <script src="map_script.js"></script>
-
-  		<script async defer
-  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbVE4MVq8YgyGRI4DCGDUcO8Y3hZgW29Q&callback=initMap">
-  		</script>
     </div>
-    <button id = "find-me">Show my location</button><br/>
+    <img id = "find-me" class='findbin' src="icons/findbin.png"><br/>
     <p id = "status"></p>
     <!--clicking link opens google maps-->
     <a id = "map-link" target="_blank"></a>
     <div class="">
 
     </div>
-    <script src="customerview.js"></script>
+  <!--  <script src="{{url_for('static', filename='customerview.js')}}"></script>-->
+  <script src="customerview.js"></script>
   </body>
 </html>>

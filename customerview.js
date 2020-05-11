@@ -27,5 +27,16 @@ function geoFindMe() {
   }
 
 }
-
+function setPaper(){
+  document.getElementById('h1').innerHTML='Paper';
+}
+function setPlastic(){
+  document.getElementById('h1').innerHTML='Plastic';
+}
+function setGeneral(){
+  document.getElementById('h1').innerHTML='General';
+}
+document.querySelector('#paper').addEventListener('click',setPaper);
+document.querySelector('#general').addEventListener('click',setGeneral);
+document.querySelector('#plastic').addEventListener('click',setPlastic);
 document.querySelector('#find-me').addEventListener('click', geoFindMe);
