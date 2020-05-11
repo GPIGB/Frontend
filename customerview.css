@@ -58,3 +58,8 @@ body {
   margin-left: 40vw;
   width: 20vw;
 }
+#map {
+  height: 80%;
+  margin : 10;
+  padding: 0;
+}
