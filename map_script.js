@@ -1,7 +1,16 @@
 var map, infoWindow;
+markers_array = [];
+
+var map_center = {
+  lat: 53.959933,
+  lng: -1.087246
+};
 
 var customLabel = {
-  'recycling': {
+  'plastic': {
+    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+  },
+  'paper': {
     url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
   },
   'general waste': {
@@ -60,15 +69,52 @@ function initMap() {
         position: point,
         icon: icon.url,
       });
+      markers_array.push(marker);
+
       marker.addListener('click', function() {
         infoWindow.setContent(contentString);
         infoWindow.open(map, marker);
         map.setCenter(marker.getPosition());
         map.setZoom(19);
-
       });
     });
   });
+}
+
+function paper_markers() {
+  for (var i = 0; i < markers_array.length; i++) {
+    if (markers_array[i].icon == "http://maps.google.com/mapfiles/ms/icons/green-dot.png") {
+      markers_array[i].setMap(map);
+    } else {
+      markers_array[i].setMap(null);
+    }
+  }
+  map.setCenter(map_center);
+  map.setZoom(15);
+}
+
+function plastic_markers() {
+  for (var i = 0; i < markers_array.length; i++) {
+    if (markers_array[i].icon == "http://maps.google.com/mapfiles/ms/icons/blue-dot.png") {
+      markers_array[i].setMap(map);
+    } else {
+      markers_array[i].setMap(null);
+    }
+  }
+  map.setCenter(map_center);
+  map.setZoom(15);
+}
+
+function general_markers() {
+  for (var i = 0; i < markers_array.length; i++) {
+    if (markers_array[i].icon == "http://maps.google.com/mapfiles/ms/icons/red-dot.png") {
+      markers_array[i].setMap(map);
+    } else {
+      markers_array[i].setMap(null);
+    }
+  }
+  map.setCenter(map_center);
+  map.setZoom(15);
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -90,7 +136,6 @@ function downloadUrl(url, callback) {
       callback(request, request.status);
     }
   };
-
   request.open('GET', url, true);
   request.send(null);
 }

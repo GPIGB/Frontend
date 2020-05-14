@@ -27,6 +27,7 @@ function geoFindMe() {
   }
 
 }
+
 function setPaper(){
   document.getElementById('h1').innerHTML='Paper';
 }

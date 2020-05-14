@@ -1,7 +1,9 @@
 <markers>
 	<marker id="1" address="48 Stonegate, York YO1 8AS, United Kingdom" lat="53.961230" lng="-1.082819" type="general waste" url="https://goo.gl/maps/3fqKx6zwTAQjp5RW9"/>
-	<marker id="2" address="Rail Station, York YO24 1AB" lat="53.958183" lng="-1.0927842" type="recycling" url="https://goo.gl/maps/t5hvGTwWr5uKGyEEA"/>
+	<marker id="2" address="Rail Station, York YO24 1AB" lat="53.958183" lng="-1.0927842" type="paper" url="https://goo.gl/maps/t5hvGTwWr5uKGyEEA"/>
 	<marker id="3" address="Rail Station, York YO24 1AB" lat="53.958139" lng="-1.092250" type="general waste" url="https://goo.gl/maps/t5hvGTwWr5uKGyEEA"/>
-	<marker id="4" address="5 High Ousegate, York YO1 9NP" lat="53.957842" lng="-1.082257" type="recycling" url="https://goo.gl/maps/mLgxaPp8eeYaTCc1A"/>
-	<marker id="5" address="Micklegate, York YO1 6JG" lat="53.957312" lng="-1.085921" type="general waste" url="https://goo.gl/maps/yDAvLTRrjeJDPG9EA"/>
+	<marker id="4" address="5 High Ousegate, York YO1 9NP" lat="53.957842" lng="-1.082257" type="plastic" url="https://goo.gl/maps/mLgxaPp8eeYaTCc1A"/>
+	<marker id="5" address="Micklegate, York YO1 6JG" lat="53.957312" lng="-1.085921" type="paper" url="https://goo.gl/maps/yDAvLTRrjeJDPG9EA"/>
+	<marker id="6" address="Wellington Row, York YO1 6HU" lat="53.959578" lng="-1.087568" type="plastic" url="https://goo.gl/maps/cZUnF2mhLAaworKY8"/>
+	<marker id="3" address="1 Kings Square, York YO1 8BH" lat="53.960327" lng="-1.080398" type="general waste" url="https://goo.gl/maps/cGdVC61Xw2A86k3v8"/>
 </markers>
