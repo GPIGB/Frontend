@@ -1,9 +1,44 @@
 <markers>
-	<marker id="1" address="48 Stonegate, York YO1 8AS, United Kingdom" lat="53.961230" lng="-1.082819" type="general waste" fill="50" url="https://goo.gl/maps/3fqKx6zwTAQjp5RW9"/>
-	<marker id="2" address="Rail Station, York YO24 1AB" lat="53.958183" lng="-1.0927842" type="paper" fill="60" url="https://goo.gl/maps/t5hvGTwWr5uKGyEEA"/>
-	<marker id="3" address="Rail Station, York YO24 1AB" lat="53.958139" lng="-1.092250" type="general waste" fill="75" url="https://goo.gl/maps/t5hvGTwWr5uKGyEEA"/>
-	<marker id="4" address="5 High Ousegate, York YO1 9NP" lat="53.957842" lng="-1.082257" type="plastic" fill="15" url="https://goo.gl/maps/mLgxaPp8eeYaTCc1A"/>
-	<marker id="5" address="Micklegate, York YO1 6JG" lat="53.957312" lng="-1.085921" type="paper" fill="50" url="https://goo.gl/maps/yDAvLTRrjeJDPG9EA"/>
-	<marker id="6" address="Wellington Row, York YO1 6HU" lat="53.959578" lng="-1.087568" type="plastic" fill="20" url="https://goo.gl/maps/cZUnF2mhLAaworKY8"/>
-	<marker id="3" address="1 Kings Square, York YO1 8BH" lat="53.960327" lng="-1.080398" type="general waste" fill="50" url="https://goo.gl/maps/cGdVC61Xw2A86k3v8"/>
+	<marker id="1" address="48 Stonegate, York YO1 8AS, United Kingdom" lat="53.961230" lng="-1.082819" type="general waste" fill="50"/>
+	<marker id="2" address="Rail Station, York YO24 1AB" lat="53.958183" lng="-1.0927842" type="paper" fill="60"/>
+	<marker id="3" address="Rail Station, York YO24 1AB" lat="53.958139" lng="-1.092250" type="general waste" fill="75"/>
+	<marker id="4" address="5 High Ousegate, York YO1 9NP" lat="53.957842" lng="-1.082257" type="plastic" fill="15"/>
+	<marker id="5" address="Micklegate, York YO1 6JG" lat="53.957312" lng="-1.085921" type="paper" fill="50"/>
+	<marker id="6" address="Wellington Row, York YO1 6HU" lat="53.959578" lng="-1.087568" type="plastic" fill="20"/>
+	<marker id="7" address="1 Kings Square, York YO1 8BH" lat="53.960327" lng="-1.080398" type="general waste" fill="50"/>
+	<marker id="8" address="407 Station Road" lat="53.957758" lng="-1.091995" type="general waste" fill="60"/>
+	<marker id="9" address="Rail Station" lat="53.958190" lng="-1.091623" type="general waste" fill="50"/>
+	<marker id="10" address="Cholera Gardens" lat="53.958898" lng="-1.090894" type="paper" fill="25"/>
+	<marker id="11" address="War Memorial Gardens" lat="53.959587" lng="-1.089600" type="general waste" fill="30"/>
+	<marker id="12" address="War Memorial Gardens" lat="53.959597" lng="-1.089697" type="paper" fill="40"/>
+	<marker id="13" address="Tanners Moat" lat="53.959679" lng="-1.087881" type="general waste" fill="50"/>
+	<marker id="14" address="Dame Judi Dench Walk" lat="53.960452" lng="-1.087559" type="plastic" fill="30"/>
+	<marker id="15" address="Entrance to Museum Gardens" lat="53.960821" lng="-1.086445" type="general waste" fill="50"/>
+	<marker id="16" address="Duncombe Place" lat="53.961531" lng="-1.084604" type="paper" fill="50"/>
+	<marker id="17" address="Duncombe Place" lat="53.961613" lng="-1.084730" type="plastic" fill="50"/>
+	<marker id="18" address="17 High Petergate" lat="53.962033" lng="-1.083764" type="paper" fill="30"/>
+	<marker id="19" address="Minster Yard" lat="53.961990" lng="-1.083479" type="general waste" fill="70"/>
+	<marker id="20" address="Bean and Gone Coffee" lat="53.962725" lng="-1.085205" type="paper" fill="50"/>
+	<marker id="21" address="1 Parliment St" lat="53.958399" lng="-1.080500" type="paper" fill="50"/>
+	<marker id="22" address="City Centre" lat="53.958668" lng="-1.080821" type="plastic" fill="70"/>
+	<marker id="23" address="38-39 Parliament St, York" lat="53.958748" lng="-1.080988" type="paper" fill="80"/>
+	<marker id="24" address="Parliment St" lat="53.958819" lng="-1.081075" type="paper" fill="40"/>
+	<marker id="25" address="Parliment St" lat="53.958848" lng="-1.081119" type="plastic" fill="80"/>
+	<marker id="26" address="Parliment St" lat="53.959056" lng="-1.081400" type="paper" fill="70"/>
+	<marker id="27" address="Church St" lat="53.959377" lng="-1.082079" type="plastic" fill="60"/>
+	<marker id="28" address="Davygate" lat="53.959567" lng="-1.082303" type="general waste" fill="30"/>
+	<marker id="29" address="Sampsons Square" lat="53.959681" lng="-1.081719" type="paper" fill="70"/>
+	<marker id="30" address="Swinegate" lat="53.959958" lng="-1.081191" type="general waste" fill="80"/>
+	<marker id="31" address="Kings Square" lat="53.960288" lng="-1.080444" type="paper" fill="60"/>
+	<marker id="32" address="Kings Square" lat="53.960069" lng="-1.080118" type="plastic" fill="40"/>
+	<marker id="33" address="Pavement" lat="53.958866" lng="-1.079659" type="paper" fill="50"/>
+	<marker id="34" address="Pavement" lat="53.958962" lng="-1.079485" type="plastic" fill="70"/>
+	<marker id="35" address="Colliergate" lat="53.959038" lng="-1.079246" type="general waste" fill="80"/>
+	<marker id="36" address="Colliergate" lat="53.959188" lng="-1.079170" type="paper" fill="60"/>
+	<marker id="37" address="Stonebow" lat="53.959163" lng="-1.078396" type="paper" fill="50"/>
+	<marker id="38" address="The Stonebow" lat="53.959315" lng="-1.076860" type="paper" fill="40"/>
+	<marker id="39" address="Merchantgate" lat="53.957457" lng="-1.077804" type="plastic" fill="70"/>
+	<marker id="40" address="Piccadily" lat="53.957530" lng="-1.078816" type="paper" fill="60"/>
+	<marker id="41" address="Goodramgate" lat="53.961973" lng="-1.079760" type="general waste" fill="80"/>
+	<marker id="42" address="College St" lat="53.961952" lng="-1.079990" type="paper" fill="90"/>
 </markers>
