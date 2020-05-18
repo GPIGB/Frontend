@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>YORBIN</title>
-    <link rel="stylesheet" href="customerview.css">
+    <link rel="stylesheet" href="visitor_view.css">
   </head>
   <body>
     <h1 id='h1'>York Bin Map</h1>
     <div class = "buttonpane">
-    <img id = paper class = "buttonchoice" src="icons/paper.png" onclick="paper_markers();"></button>
-    <img id = plastic class = "buttonchoice" src="icons/plastic.png" onclick="plastic_markers();"></button>
-    <img id = general class = "buttonchoice" src="icons/general.png" onclick="general_markers();"></button>
+    <img id = paper class = "buttonchoice" src="/icons/paper.png" onclick="paper_markers();"></button>
+    <img id = plastic class = "buttonchoice" src="/icons/plastic.png" onclick="plastic_markers();"></button>
+    <img id = general class = "buttonchoice" src="/icons/general.png" onclick="general_markers();"></button>
   </div>
     <div class="gmap">
       <!--ENTER GMAP STUFF HERE-->
       <div id="map"></div>
-      <script src="map_script.js"></script>
+      <script src="visitor_map.js"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbVE4MVq8YgyGRI4DCGDUcO8Y3hZgW29Q&callback=initMap"></script>
       </div>
     </div>
@@ -27,6 +27,6 @@
 
     </div>
   <!--  <script src="{{url_for('static', filename='customerview.js')}}"></script>-->
-  <script src="customerview.js"></script>
+  <script src="visitor_view.js"></script>
   </body>
 </html>>

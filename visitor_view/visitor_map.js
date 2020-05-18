@@ -8,13 +8,13 @@ var map_center = {
 
 var customLabel = {
   'plastic': {
-    url: "icons/blue-dot.png",
+    url: "/icons/blue-dot.png",
   },
   'paper': {
-    url: "icons/green-dot.png",
+    url: "/icons/green-dot.png",
   },
   'general waste': {
-    url: "icons/orange-dot.png"
+    url: "/icons/orange-dot.png"
   }
 };
 
@@ -46,7 +46,7 @@ function initMap() {
   }
 
   // Change this depending on the name of your PHP or XML file
-  downloadUrl('markers_test.xml', function(data) {
+  downloadUrl('/markers.xml', function(data) {
     var xml = data.responseXML;
     var markers = xml.documentElement.getElementsByTagName('marker');
     Array.prototype.forEach.call(markers, function(markerElem) {
@@ -85,7 +85,7 @@ function initMap() {
 
 function paper_markers() {
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].icon == "icons/green-dot.png") {
+    if (markers_array[i].icon == "/icons/green-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
@@ -97,7 +97,7 @@ function paper_markers() {
 
 function plastic_markers() {
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].icon == "icons/blue-dot.png") {
+    if (markers_array[i].icon == "/icons/blue-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
@@ -109,7 +109,7 @@ function plastic_markers() {
 
 function general_markers() {
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].icon == "icons/orange-dot.png") {
+    if (markers_array[i].icon == "/icons/orange-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);

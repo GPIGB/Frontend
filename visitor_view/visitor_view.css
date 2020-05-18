@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background: white;
+  padding: 20px
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-family: Asap, sans-serif;
+}
+body {
+  background-color: #292C34;
+}
+
+.buttonchoice {
+  border: 4px solid white;
+  display: inline-block;
+  margin-left: 20vw;
+  border-radius: 2.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  width: 6.66vw;
+  height: 6.66vw;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.buttonchoice:hover {
+  cursor: pointer;
+  border: 5px solid gold;
+}
+.buttonpane{
+  margin-left: auto;
+  margin-right: auto;
+}
+.findbin{
+  border: 4px solid white;
+  display: inline-block;
+  margin-left: 45vw;
+  width: 10vw;
+  height: 10vw;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.findbin:hover{
+    cursor: pointer;
+    border: 5px solid gold;
+  }
+#status{
+  margin-left: 40vw;
+  width: 20vw;
+  margin-top: 15px;
+}
+#map-link{
+  margin-top: 15px;
+  margin-left: 40vw;
+  width: 20vw;
+}
+#map {
+  height: 80%;
+  margin : 10;
+  padding: 0;
+}

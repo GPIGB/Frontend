@@ -1,0 +1,34 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>YORBIN</title>
+    <link rel="stylesheet" href="council_view.css">
+  </head>
+  <body>
+    <h1 id='h1'>York Bin Map</h1>
+    <div class = "buttonpane">
+    <img id = paper class = "buttonchoice" src="/icons/paper.png" onclick="paper_markers();"></button>
+    <img id = plastic class = "buttonchoice" src="/icons/plastic.png" onclick="plastic_markers();"></button>
+    <img id = general class = "buttonchoice" src="/icons/general.png" onclick="general_markers();"></button>
+  </div>
+    <div class="gmap">
+      <div id="floating-panel">
+        <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+      </div>
+      <div id="map"></div>
+      <script src="council_map.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbVE4MVq8YgyGRI4DCGDUcO8Y3hZgW29Q&libraries=visualization&callback=initMap"></script>
+      </div>
+    </div>
+    <!--<img id = "find-me" class='findbin' src="icons/findbin.png"><br/>-->
+    <p id = "status"></p>
+    <!--clicking link opens google maps-->
+    <a id = "map-link" target="_blank"></a>
+    <div class="">
+
+    </div>
+  <!--  <script src="{{url_for('static', filename='customerview.js')}}"></script>-->
+  <script src="council_view.js"></script>
+  </body>
+</html>>
