@@ -8,13 +8,13 @@ var map_center = {
 
 var customLabel = {
   'plastic': {
-    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+    url: "icons/blue-dot.png",
   },
   'paper': {
-    url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+    url: "icons/green-dot.png",
   },
   'general waste': {
-    url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+    url: "icons/orange-dot.png"
   }
 };
 
@@ -53,6 +53,7 @@ function initMap() {
       var id = markerElem.getAttribute('id');
       var address = markerElem.getAttribute('address');
       var type = markerElem.getAttribute('type');
+      var fill = markerElem.getAttribute('fill');
       var point = new google.maps.LatLng(
           parseFloat(markerElem.getAttribute('lat')),
           parseFloat(markerElem.getAttribute('lng')));
@@ -60,6 +61,7 @@ function initMap() {
 
       var contentString = '<div id="content"><b>' + type
             + '</b><div id="bodyContent">'+ address
+            + '<p>Fill level: ' + fill + '%</p>'
             + '<p><a href=' + url
             + '>View on Google Maps</a></p></div></div>';
 
@@ -83,7 +85,7 @@ function initMap() {
 
 function paper_markers() {
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].icon == "http://maps.google.com/mapfiles/ms/icons/green-dot.png") {
+    if (markers_array[i].icon == "icons/green-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
@@ -95,7 +97,7 @@ function paper_markers() {
 
 function plastic_markers() {
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].icon == "http://maps.google.com/mapfiles/ms/icons/blue-dot.png") {
+    if (markers_array[i].icon == "icons/blue-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
@@ -107,7 +109,7 @@ function plastic_markers() {
 
 function general_markers() {
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].icon == "http://maps.google.com/mapfiles/ms/icons/red-dot.png") {
+    if (markers_array[i].icon == "icons/orange-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
