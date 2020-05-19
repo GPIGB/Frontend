@@ -57,7 +57,7 @@ function initMap() {
       var point = new google.maps.LatLng(
           parseFloat(markerElem.getAttribute('lat')),
           parseFloat(markerElem.getAttribute('lng')));
-      var url = markerElem.getAttribute('url');
+      var url = "https://www.google.com/maps/search/?api=1&query=" + parseFloat(markerElem.getAttribute('lat')) + "," + parseFloat(markerElem.getAttribute('lng'))
 
       var contentString = '<div id="content"><b>' + type
             + '</b><div id="bodyContent">'+ address
