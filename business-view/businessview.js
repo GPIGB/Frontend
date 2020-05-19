@@ -9,3 +9,9 @@ function goHome(){
 
 document.querySelector('#timeline').addEventListener('click',showTimeline);
 document.querySelector('#home').addEventListener('click',goHome);
+Plotly.newPlot(document.getElementById('timegraph'), [
+  { name: 'Paper', y: [1, 2, 4, 8, 16]},
+  { name: 'Plastic', y: [1, 3, 7, 10, 11]}],
+  { title: 'Rates of recycling by material',
+    xaxis:{title: 'Days since the start of the month'},
+    yaxis:{title: 'Kilograms of waste recycled'}});
