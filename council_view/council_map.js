@@ -1,3 +1,4 @@
+
 var map, infoWindow,heatmap;
 var markers_array = [];
 var heatmap_array = [];
@@ -189,3 +190,4 @@ function downloadUrl(url, callback) {
 }
 
 function doNothing() {}
+document.querySelector('#binmap').addEventListener('click',initMap);

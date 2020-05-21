@@ -6,6 +6,44 @@
     <link rel="stylesheet" href="council_view.css">
   </head>
   <body>
+    <ul>
+      <li><div class="topbar" href="" id="home">Home</div></li>
+      <li><div class="topbar" href="" id="binmap">Binmap</div></li>
+      <li><div class="topbar" href="" id="timeline">Timeline</div></li>
+      <li><div class="topbar" href="" id="contact">Contact</div></li>
+      <li><div class="topbar" href="" id="qr">QR codes</div></li>
+      <li><div class="topbar" href="" id="certificate">Cerificate</div></li>
+      <li><div class="topbar" href="" id="about">About</div></li>
+    </ul>
+    <div class="stat-summary" id="homescreen">
+      <p>recycled last week: <span class="statval" id="last-week-stat">9</span> m2 </p>
+      <p>total recycled: <span class="statval" id="tot-stat">198</span> m2</p>
+      <p> estimated recycling ratio: <span class="statval" id="ratio-stat">68</span> % </p>
+    </div>
+    <script src="http://cdn.plot.ly/plotly-latest.min.js"></script>
+    <div id="timegraph" style="position: absolute;left: -60px;top: 90px;"></div>
+    <div id="qr-codes">
+      right click the links and select save as to save the QR image
+      <p>  <a class="qrlink" href="/icons/QRpaper.png">paper</a></p>
+      <p><a class="qrlink" href="/icons/QRplastic.png">plastic</a></p>
+      <p><a class="qrlink" href="/icons/QRgeneral.png">general</a></p>
+    </div>
+    <div id="contact-text">
+      <p>Contact the developer:</p>
+      <p></p><a href="https://github.com/GPIGB">our contact details</a>
+      <p>Contact City Council</p>
+      <p></p><a href="https://www.york.gov.uk/ContactUs">City Council Link</a>
+    </div>
+    <div id="about-text">
+      The YORBIN projet aims for better management of waste in york.<p></p> It's been developed since january 2020 by students at the university of York
+      The solution has different views aimed at different Customers.<p></p> The Visitors are able to use our system to find the closest appropriate bin to them,
+      businesses can monitor their recycling waste,<p></p> get printable QR codes and certificates, while the City Council will be able to maintain
+      an optimal positioning of bins troughout the city,<p></p> making use of the latest machine learning technologies.
+    </div>
+      <img id="certificate-img" class="clickable" src="/icons/certificate.png" href="/icons/certificate.png" alt="">
+
+
+  <div id="location-maps">
     <h1 id='h1'>York Bin Map</h1>
     <div class = "buttonpane">
     <img id = paper class = "buttonchoice" src="/icons/paper.png" onclick="paper_markers();"></button>
@@ -20,14 +58,16 @@
       <script src="council_map.js"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbVE4MVq8YgyGRI4DCGDUcO8Y3hZgW29Q&libraries=visualization&callback=initMap"></script>
       </div>
-    </div>
+
     <!--<img id = "find-me" class='findbin' src="icons/findbin.png"><br/>-->
     <p id = "status"></p>
     <!--clicking link opens google maps-->
     <a id = "map-link" target="_blank"></a>
-    <div class="">
 
-    </div>
+ <div class="">
+
+ </div>
+  </div>
   <!--  <script src="{{url_for('static', filename='customerview.js')}}"></script>-->
   <script src="council_view.js"></script>
   </body>

@@ -60,15 +60,18 @@ body {
   width: 20vw;
 }
 #map {
-  height: 80%;
-  margin : 10;
+  height: 100%;
+  width:90vw;
+  margin-left : 5vw;
+  margin-right : 5vw;
+  margin-top:1vw;
   padding: 0;
 }
 
 #floating-panel {
   position: absolute;
-  top: 10px;
-  left: 0%;
+  top: 2000px;
+  left: 50%;
   z-index: 5;
   background-color: #fff;
   padding: 5px;
@@ -78,6 +81,9 @@ body {
   line-height: 30px;
   padding-left: 10px;
 }
+#location-maps{
+  display: none;
+}
 #floating-panel {
   background-color: #fff;
   border: 1px solid #999;
@@ -86,4 +92,80 @@ body {
   position: absolute;
   top: 10px;
   z-index: 5;
+}
+*{
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0 ;
+  background-color: #92a8d1
+  padding: 0;
+}
+li {
+  float: left;
+}
+.topbar:hover{
+  background-color: #034f84;
+}
+.topbar {
+  display: block;
+  padding-left: 5.2vw;
+  padding-right: 5.2vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  background-color: #92a8d1;
+}
+.stat-summary{
+  padding: 5vw;
+  display: inline-block;
+  margin-left: 40vw;
+}
+#qr-codes{
+  margin-left: 30vw;
+  padding: 5vw;
+  display: none;
+}
+#about-text{
+  margin-left: 10vw;
+  padding: 5vw;
+  display: none;
+}
+#contact-text{
+  margin-left: 30vw;
+  padding: 5vw;
+  display: none;
+}
+.qrlink{
+  padding: 5vw;
+}
+#timegraph{
+  width: 80vw;
+  height: 30vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 5vw;
+  display: none;
+}
+#certificate-img{
+  border: 4px solid white;
+  display: inline-block;
+  margin-left: 5vw;
+  border-radius: 0.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  width: 80vw;
+  height: 50vw;
+  transition: all 0.5s ease;
+  position: relative;
+  display: none;
+}
+#certificate-img:hover{
+  border: 4px solid gold;
+}
+.statval{
+  color: #92a8d1;
+}
+body{
+  background-color: #292C34;
 }
