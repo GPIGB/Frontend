@@ -15,8 +15,8 @@ li {
 }
 .topbar {
   display: block;
-  padding-left: 7.5vw;
-  padding-right: 7.5vw;
+  padding-left: 6.1vw;
+  padding-right: 6.1vw;
   padding-top: 3vw;
   padding-bottom: 3vw;
   background-color: #92a8d1;
@@ -26,6 +26,24 @@ li {
   display: inline-block;
   margin-left: 40vw;
 }
+#qr-codes{
+  margin-left: 30vw;
+  padding: 5vw;
+  display: none;
+}
+#about-text{
+  margin-left: 10vw;
+  padding: 5vw;
+  display: none;
+}
+#contact-text{
+  margin-left: 30vw;
+  padding: 5vw;
+  display: none;
+}
+.qrlink{
+  padding: 5vw;
+}
 #timegraph{
   width: 80vw;
   height: 30vw;
@@ -33,6 +51,22 @@ li {
   margin-right: 5vw;
   padding: 5vw;
   display: none;
+}
+#certificate-img{
+  border: 4px solid white;
+  display: inline-block;
+  margin-left: 5vw;
+  border-radius: 0.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  width: 80vw;
+  height: 50vw;
+  transition: all 0.5s ease;
+  position: relative;
+  display: none;
+}
+#certificate-img:hover{
+  border: 4px solid gold;
 }
 .statval{
   color: #92a8d1;
