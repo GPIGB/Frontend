@@ -5,6 +5,15 @@ var map_center = {
   lat: 53.959933,
   lng: -1.087246
 };
+function setPaper(){
+  document.getElementById('h1').innerHTML='Paper';
+}
+function setPlastic(){
+  document.getElementById('h1').innerHTML='Plastic';
+}
+function setGeneral(){
+  document.getElementById('h1').innerHTML='General';
+}
 
 var customLabel = {
   'plastic': {
@@ -81,9 +90,11 @@ function initMap() {
       });
     });
   });
+  processType();
 }
 
 function paper_markers() {
+  setPaper();
   for (var i = 0; i < markers_array.length; i++) {
     if (markers_array[i].icon == "/icons/green-dot.png") {
       markers_array[i].setMap(map);
@@ -96,6 +107,7 @@ function paper_markers() {
 }
 
 function plastic_markers() {
+  setPlastic();
   for (var i = 0; i < markers_array.length; i++) {
     if (markers_array[i].icon == "/icons/blue-dot.png") {
       markers_array[i].setMap(map);
@@ -108,6 +120,7 @@ function plastic_markers() {
 }
 
 function general_markers() {
+  setGeneral();
   for (var i = 0; i < markers_array.length; i++) {
     if (markers_array[i].icon == "/icons/orange-dot.png") {
       markers_array[i].setMap(map);
@@ -117,6 +130,27 @@ function general_markers() {
   }
   map.setCenter(map_center);
   map.setZoom(15);
+}
+
+function processType()
+{
+  var parameters = location.search.substring(1).split("&");
+
+  var temp = parameters[0].split("=");
+  wtype = unescape(temp[1]);
+  if (wtype=="paper"){
+    setPaper();
+    paper_markers();
+  }
+  else if (wtype=="plastic") {
+    setPlastic();
+    plastic_markers();
+  }
+  else {
+    setGeneral();
+    general_markers();
+  }
+
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
