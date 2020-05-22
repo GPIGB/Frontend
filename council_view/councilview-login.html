@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>YORBIN</title>
+    <link rel="stylesheet" href="councilview-login.css">
+  </head>
+  <body>
+    <form action="councilview.html">
+     <div class="imgcontainer">
+       <img src="/icons/logo.png" alt="Avatar" class="avatar">
+     </div>
+
+     <div class="container">
+       <label for="uname"><b>Username</b></label>
+       <input type="text" placeholder="Enter Username" name="uname" required>
+
+       <label for="psw"><b>Password</b></label>
+       <input type="password" placeholder="Enter Password" name="psw" required>
+
+       <button type="submit">Login</button>
+       <label>
+         <input type="checkbox" checked="checked" name="remember"> Remember me
+       </label>
+     </div>
+
+     <div class="container" style="background-color:#92a8d1">
+       <button type="button" class="cancelbtn">Cancel</button>
+       <span class="psw">Forgot <a href="#">password?</a></span>
+     </div>
+   </form>
+  <!--  <script src="{{url_for('static', filename='customerview.js')}}"></script>-->
+
+  </body>
+</html>

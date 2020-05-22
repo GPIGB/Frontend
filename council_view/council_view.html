@@ -42,6 +42,13 @@
     </div>
       <img id="certificate-img" class="clickable" src="/icons/certificate.png" href="/icons/certificate.png" alt="">
 
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+              Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+     </form>
+
+
 
   <div id="location-maps">
     <h1 id='h1'>York Bin Map</h1>
@@ -52,7 +59,7 @@
   </div>
     <div class="gmap">
       <div id="floating-panel">
-        <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+        <button id="toggle-heatmap" onclick="toggleHeatmap()">Toggle Heatmap</button>
       </div>
       <div id="map"></div>
       <script src="council_map.js"></script>
