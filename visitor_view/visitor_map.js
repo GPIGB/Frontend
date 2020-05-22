@@ -79,7 +79,6 @@ function initMap() {
         map: map,
         position: point,
         icon: icon.url,
-        type: type,
       });
       markers_array.push(marker);
 
@@ -98,7 +97,7 @@ function initMap() {
 function paper_markers() {
   setPaper();
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].type == "paper") {
+    if (markers_array[i].icon == "/icons/green-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
@@ -111,7 +110,7 @@ function paper_markers() {
 function plastic_markers() {
   setPlastic();
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].type == "plastic") {
+    if (markers_array[i].icon == "/icons/blue-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
@@ -124,7 +123,7 @@ function plastic_markers() {
 function general_markers() {
   setGeneral();
   for (var i = 0; i < markers_array.length; i++) {
-    if (markers_array[i].type == "general waste") {
+    if (markers_array[i].icon == "/icons/orange-dot.png") {
       markers_array[i].setMap(map);
     } else {
       markers_array[i].setMap(null);
@@ -140,7 +139,9 @@ function processType()
 
   var temp = parameters[0].split("=");
   wtype = unescape(temp[1]);
+  wtype=wtype.toLowerCase();
   if (wtype=="paper"){
+
     setPaper();
     paper_markers();
   }
