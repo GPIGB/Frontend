@@ -76,6 +76,7 @@ function initMap() {
         map: map,
         position: point,
         icon: icon.url,
+        type: type,
       });
       markers_array.push(marker);
       heatmap_array.push({location: point, weight: fill/100});
@@ -108,7 +109,7 @@ function paper_markers() {
     heatmap.setData(paper_heatmap_array);
   } else {
     for (var i = 0; i < markers_array.length; i++) {
-      if (markers_array[i].icon == "/icons/green-dot.png") {
+      if (markers_array[i].type == "paper") {
         markers_array[i].setMap(map);
       } else {
         markers_array[i].setMap(null);
@@ -124,7 +125,7 @@ function plastic_markers() {
     heatmap.setData(plastic_heatmap_array);
   } else {
     for (var i = 0; i < markers_array.length; i++) {
-      if (markers_array[i].icon == "/icons/blue-dot.png") {
+      if (markers_array[i].type == "plastic") {
         markers_array[i].setMap(map);
       } else {
         markers_array[i].setMap(null);
@@ -140,7 +141,7 @@ function general_markers() {
     heatmap.setData(generalwaste_heatmap_array);
   } else {
     for (var i = 0; i < markers_array.length; i++) {
-      if (markers_array[i].icon == "/icons/orange-dot.png") {
+      if (markers_array[i].type == "general waste") {
         markers_array[i].setMap(map);
       } else {
         markers_array[i].setMap(null);
