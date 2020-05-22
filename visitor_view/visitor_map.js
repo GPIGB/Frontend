@@ -88,6 +88,7 @@ function initMap() {
         map.setCenter(marker.getPosition());
         map.setZoom(19);
       });
+      processType();
     });
   });
   processType();
