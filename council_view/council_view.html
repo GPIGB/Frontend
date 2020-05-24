@@ -60,12 +60,34 @@
     <div class="gmap">
       <div id="floating-panel">
         <button id="toggle-heatmap" onclick="toggleHeatmap()">Toggle Heatmap</button>
+        <button id="toggle-edit" onclick="toggleEdit()">Edit map</button>
       </div>
       <div id="map"></div>
       <script src="council_map.js"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbVE4MVq8YgyGRI4DCGDUcO8Y3hZgW29Q&libraries=visualization&callback=initMap"></script>
-      </div>
+    </div>
 
+    <div class="form-popup" id="editMarkerForm">
+      <form action="edit-marker.php" class="form-container" method="post">
+      <!-- <div class="form-container" id="container"> -->
+        <h1 style="color:black;">Marker Edit</h1>
+        <p>Select Bin Type</p>
+        <br>
+        <input type="radio" id="paper" name="type" value="paper">
+        <label for="paper">Paper</label><br>
+        <input type="radio" id="plastic" name="type" value="plastic">
+        <label for="paper">Plastic</label><br>
+        <input type="radio" id="general" name="type" value="general waste">
+        <label for="general">General Waste</label><br>
+        <br>
+        <label for="description"><b>Location Description</b></label>
+        <input type="text" placeholder="Describe bin location" name="description" required>
+
+        <button type="submit" class="btn" onclick="closeForm()">Submit</button>
+        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+      <!-- </div> -->
+    </div>
     <!--<img id = "find-me" class='findbin' src="icons/findbin.png"><br/>-->
     <p id = "status"></p>
     <!--clicking link opens google maps-->

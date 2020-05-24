@@ -6,6 +6,8 @@ var paper_heatmap_array = [];
 var plastic_heatmap_array = [];
 var generalwaste_heatmap_array = [];
 var heatmap_enabled = false;
+var edit_map = false;
+var editing = false;
 var map_center = {
   lat: 53.959933,
   lng: -1.087246
@@ -102,6 +104,20 @@ function initMap() {
     map: null,
     radius: 20
   });
+
+  map.addListener('click', function(e) {
+    if (edit_map == true && editing == false) {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: e.latLng,
+      });
+      markers_array.push(marker);
+      map.setCenter(e.latLng);
+      map.setZoom(19);
+      openForm();
+    }
+    //heatmap_array.push({location: e.LatLng, weight: fill/100});
+  });
 }
 
 function paper_markers() {
@@ -164,8 +180,38 @@ function toggleHeatmap() {
   map.setZoom(15);
   heatmap.setData(heatmap_array);
   heatmap.setMap(heatmap_enabled ? null : map);
-  heatmap_enabled = !heatmap_enabled;
+
+  if (heatmap_enabled == false) {
+    document.getElementById('toggle-heatmap').style.background = "#ddd";
+    heatmap_enabled = true;
+  } else {
+    document.getElementById('toggle-heatmap').style.background = "#fff";
+    heatmap_enabled = false;
+  }
 }
+
+function toggleEdit() {
+  if (edit_map == false) {
+    document.getElementById('toggle-edit').style.background = "#ddd";
+    edit_map = true;
+  } else {
+    document.getElementById('toggle-edit').style.background = "#fff";
+    edit_map = false;
+  }
+}
+
+function openForm() {
+  document.getElementById("editMarkerForm").style.display = "block";
+  editing = true;
+}
+
+function closeForm() {
+  document.getElementById("editMarkerForm").style.display = "none";
+  editing = false;
+  map.setCenter(map_center);
+  map.setZoom(15);
+}
+
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
