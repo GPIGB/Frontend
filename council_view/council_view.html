@@ -68,7 +68,13 @@
     </div>
 
     <div class="form-popup" id="editMarkerForm">
-      <form action="edit-marker.php" class="form-container" method="post">
+      <?php
+        $type = $description = "";
+        $typeErr = "";
+        $type = $_POST["type"];
+        $description = $_POST["description"];
+      ?>
+      <form action="#" class="form-container" method="post">
       <!-- <div class="form-container" id="container"> -->
         <h1 style="color:black;">Marker Edit</h1>
         <p>Select Bin Type</p>
@@ -86,6 +92,13 @@
         <button type="submit" class="btn" onclick="closeForm()">Submit</button>
         <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
       </form>
+
+      <script>
+        var type = "<?php echo $type; ?>";
+        var description = "<?php echo $description; ?>";
+        console.log(type);
+        console.log(description);
+      </script>
       <!-- </div> -->
     </div>
     <!--<img id = "find-me" class='findbin' src="icons/findbin.png"><br/>-->

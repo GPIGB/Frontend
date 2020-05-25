@@ -208,6 +208,10 @@ function openForm() {
 function closeForm() {
   document.getElementById("editMarkerForm").style.display = "none";
   editing = false;
+  // var type = "<?php echo $type; ?>";
+  // var description = "<?php echo $description; ?>";
+  // console.log(type);
+  // console.log(description);
   map.setCenter(map_center);
   map.setZoom(15);
 }
