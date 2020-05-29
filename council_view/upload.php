@@ -2,6 +2,7 @@
 <?php
 $target_dir = str_replace("council_view","icons/",__DIR__);
 echo str_replace("council_view","icons/",__DIR__);
+$_FILES["fileToUpload"]["name"] = "certificate.png";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
