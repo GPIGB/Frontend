@@ -216,6 +216,17 @@ function closeForm() {
   map.setZoom(15);
 }
 
+function all_markers() {
+  if (heatmap_enabled == true) {
+    heatmap.setData(heatmap_array);
+  } else {
+    for (var i = 0; i < markers_array.length; i++) {
+        markers_array[i].setMap(map);
+    }
+  }
+  map.setCenter(map_center);
+  map.setZoom(15);
+}
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
@@ -241,4 +252,4 @@ function downloadUrl(url, callback) {
 }
 
 function doNothing() {}
-document.querySelector('#binmap').addEventListener('click',initMap);
+document.querySelector('#binmap').addEventListener('click',all_markers);
