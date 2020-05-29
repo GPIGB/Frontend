@@ -117,6 +117,21 @@ function reload(){
    //this line is to watch the result in console , you can remove it later
     console.log("Refreshed");
 }
+
+function processType()
+{
+  var parameters = location.search.substring(1).split("&");
+  var temp = parameters[0].split("=");
+  wtype = unescape(temp[1]);
+  wtype=wtype.toLowerCase();
+  console.log("check");
+  if (wtype=="certificate"){
+    console.log("cert=true");
+    showCertificate();
+  }
+}
+processType();
+
 document.querySelector('#uploadcert').addEventListener('click',reload);
 document.querySelector('#certificate-img').addEventListener('click',pritCert);
 document.querySelector('#about').addEventListener('click',aboutUs);
