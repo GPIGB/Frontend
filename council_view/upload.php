@@ -48,5 +48,5 @@ if ($uploadOk == 0) {
     echo "Sorry, there was an error uploading your file.";
   }
 }
-    header("Location: council_view.html");
+    header("Location: council_view.html?loc=certificate");
 ?>
