@@ -10,7 +10,7 @@ header {
 h1 {
   color: white;
   text-align: center;
-  font-family: 'Roboto','sans-serif';
+  font-family: Roboto, sans-serif;
 }
 body {
   background-color: #8cc73e;
@@ -29,8 +29,7 @@ body {
 }
 .buttonchoice:hover {
   cursor: pointer;
-  border: 3px solid white;
-  border-radius: 2px;
+  box-shadow: 0px 0px 5px 1px #ffffff;
 }
 .buttonpane{
   margin-left: auto;
