@@ -1,13 +1,16 @@
 *{
-  color: white;
-}
+  color: white;  
+  }
+  
 /* Bordered form */
 form {
- border: 3px solid #92a8d1;
- background-color: #292C34;
+ border: 3px solid #696969;
+ background-color: #8cc73e;
+ 
 }
 body{
-  background-color: #292C34;
+  background-color: white;
+  font-family: Roboto,sans-serif;
 }
 /* Full-width inputs */
 input[type=text], input[type=password] {
@@ -19,11 +22,21 @@ input[type=text], input[type=password] {
  box-sizing: border-box;
  color: black;
 }
+input[type=text]:focus {
+ border: 2px solid #696969;
+ outline: none;
+}
+
+input[type=password]:focus {
+ border: 2px solid #696969;
+ outline: none;
+}
+
+
 
 /* Set a style for all buttons */
 button {
- background-color: #034f84;
-
+ background-color: #696969;
  padding: 14px 20px;
  margin: 8px 0;
  border: none;
@@ -31,9 +44,13 @@ button {
  width: 100%;
 }
 
+button:focus{
+	outline: none;
+}
+
 /* Add a hover effect for buttons */
 button:hover {
- opacity: 0.8;
+	box-shadow: 0px 0px 5px 1px #000000;
 }
 
 /* Extra style for the cancel button (red) */
@@ -65,8 +82,33 @@ img.avatar {
 span.psw {
  float: right;
  padding-top: 16px;
-
 }
+
+/* Checkbox formatting */
+input[type=checkbox] {  
+  margin-right: 8px;
+  cursor: pointer;  
+}
+
+input[type=checkbox]:after {
+ 
+  background-color: #696969;
+  display: inline-block;
+  visibility: visible;
+}
+
+input[type=checkbox]:checked:after {
+  content: "\2714";
+  text-align: centre;
+  font-size: 11px;
+  width: 11px;
+  height: 11px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  
+  background-color: #696969;
+}
+
 span.Username{
   color:black;
 }
@@ -75,7 +117,7 @@ span.Username{
  span.psw {
    display: block;
    float: none;
-   background-color: #92a8d1;
+   background-color: #8cc73e;
  }
  .cancelbtn {
    width: 100%;
