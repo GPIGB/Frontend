@@ -12,7 +12,7 @@
       <li><div class="topbar" href="" id="timeline">Timeline</div></li>
       <li><div class="topbar" href="" id="contact">Contact</div></li>
       <li><div class="topbar" href="" id="qr">QR codes</div></li>
-      <li><div class="topbar" href="" id="certificate">Cerificate</div></li>
+      <li><div class="topbar" href="" id="certificate">Certificate</div></li>
       <li><div class="topbar" href="" id="about">About</div></li>
     </ul>
     <div class="stat-summary" id="homescreen">
@@ -29,10 +29,18 @@
       <p><a class="qrlink" href="/icons/QRgeneral.png">general</a></p>
     </div>
     <div id="contact-text">
-      <p>Contact the developer:</p>
-      <p></p><a href="https://github.com/GPIGB">our contact details</a>
-      <p>Contact City Council</p>
-      <p></p><a href="https://www.york.gov.uk/ContactUs">City Council Link</a>
+        <div class="container">
+	    <form action="action_page.php">
+         <label for="name">Name</label>
+         <input type="text" id="name" name="name" placeholder="Your name...">
+         <label for="email">Email</label>
+         <input type="text" id="email" name="email" placeholder="Your email...">
+         <label for="subject">Message</label>
+         <textarea id="subject" name="subject" placeholder="Message..." style="height:200px"></textarea>
+         <input type="submit" value="Submit">
+
+         </form>
+     </div>
     </div>
     <div id="about-text">
       The YORBIN projet aims for better management of waste in york.<p></p> It's been developed since january 2020 by students at the university of York
@@ -115,3 +123,4 @@
   <script src="council_view.js"></script>
   </body>
 </html>
+
