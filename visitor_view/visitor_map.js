@@ -17,13 +17,13 @@ function setGeneral(){
 
 var customLabel = {
   'plastic': {
-    url: "/icons/blue-dot.png",
+    url: "/icons/plastic_pin.png",
   },
   'paper': {
-    url: "/icons/green-dot.png",
+    url: "/icons/paper_pin.png",
   },
   'general waste': {
-    url: "/icons/orange-dot.png"
+    url: "/icons/general_pin.png"
   }
 };
 
