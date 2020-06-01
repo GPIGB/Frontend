@@ -95,12 +95,14 @@ function showCertificate(){
   document.querySelector('#certificate-form').style.display="inline-block";
   document.querySelector('#contact-text').style.display="none";
   document.querySelector('#location-maps').style.display="none";
+  document.querySelector('#about-text').style.display="none";
   document.querySelector('#certificate-img').style.display="block";
 }
 function showMap(){
   document.querySelector('#homescreen').style.display="none";
   document.querySelector('#certificate-form').style.display="none";
   document.querySelector('#timegraph').style.display="none";
+  document.querySelector('#about-text').style.display="none";
   document.querySelector('#qr-codes').style.display="none";
   document.querySelector('#contact-text').style.display="none";
   document.querySelector('#certificate-img').style.display="none";
