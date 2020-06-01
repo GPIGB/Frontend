@@ -176,8 +176,8 @@ li {
 .topbar {
   display: block;
   color: white;
-  padding-left: 5.2vw;
-  padding-right: 5.2vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   padding-top: 2vw;
   padding-bottom: 2vw;
   background-color: #92a8d1;
@@ -201,6 +201,12 @@ li {
   margin-left: 30vw;
   padding: 5vw;
   display: none;
+}
+#home{
+  margin-left: 3vw;
+}
+#about{
+  margin-right: 1vw;
 }
 .qrlink{
   padding: 5vw;
