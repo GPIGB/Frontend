@@ -46,7 +46,7 @@
               Select image to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input id="uploadcert" type="submit" value="Upload Image" name="submit">
-            
+
         </form>
 
 
@@ -80,15 +80,15 @@
         <h1 style="color:black;">Marker Edit</h1>
         <p>Select Bin Type</p>
         <br>
-        <input type="radio" id="paper" name="type" value="paper">
+        <input type="radio" id="paper_radio" name="type" value="paper">
         <label for="paper">Paper</label><br>
-        <input type="radio" id="plastic" name="type" value="plastic">
+        <input type="radio" id="plastic_radio" name="type" value="plastic">
         <label for="paper">Plastic</label><br>
-        <input type="radio" id="general" name="type" value="general waste">
+        <input type="radio" id="general_radio" name="type" value="general waste">
         <label for="general">General Waste</label><br>
         <br>
         <label for="description"><b>Location Description</b></label>
-        <input type="text" placeholder="Describe bin location" name="description" required>
+        <input type="text" id="location_description" placeholder="Describe bin location" name="description" required>
 
         <button type="submit" class="btn" onclick="closeForm()">Submit</button>
         <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>

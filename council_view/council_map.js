@@ -79,6 +79,7 @@ function initMap() {
         position: point,
         icon: icon.url,
         type: type,
+        description: address,
       });
       markers_array.push(marker);
       heatmap_array.push({location: point, weight: fill/100});
@@ -95,6 +96,11 @@ function initMap() {
         infoWindow.open(map, marker);
         map.setCenter(marker.getPosition());
         map.setZoom(19);
+        if (edit_map == true && editing == false) {
+          openForm();
+          document.getElementById("paper_radio").checked = true;
+          document.getElementById('location_description').placeholder = marker.description;
+        }
       });
     });
   });
@@ -114,6 +120,8 @@ function initMap() {
       markers_array.push(marker);
       map.setCenter(e.latLng);
       map.setZoom(19);
+      document.getElementById("paper_radio").checked = false;
+      document.getElementById('location_description').placeholder = "Describe bin location";
       openForm();
     }
     //heatmap_array.push({location: e.LatLng, weight: fill/100});
