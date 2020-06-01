@@ -278,3 +278,9 @@ input[type=submit]:hover {
   margin-right : 5vw;
 }
 
+.logo{
+  position: absolute;
+  right:0;
+  bottom: 0;
+}
+
