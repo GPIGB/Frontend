@@ -29,13 +29,13 @@ function geoFindMe() {
 }
 
 function setPaper(){
-  document.getElementById('h1').innerHTML='Paper';
+  document.getElementById('h1').innerHTML='York Bin Map - Paper';
 }
 function setPlastic(){
-  document.getElementById('h1').innerHTML='Plastic';
+  document.getElementById('h1').innerHTML='York Bin Map - Plastic';
 }
 function setGeneral(){
-  document.getElementById('h1').innerHTML='General';
+  document.getElementById('h1').innerHTML='York Bin Map - General Waste';
 }
 
 function showTimeline(){
@@ -106,7 +106,7 @@ function showMap(){
   document.querySelector('#qr-codes').style.display="none";
   document.querySelector('#contact-text').style.display="none";
   document.querySelector('#certificate-img').style.display="none";
-  document.querySelector('#location-maps').style.display="inline-block";
+  document.querySelector('#location-maps').style.display="block";
 }
 function pritCert() {
   window.location.href = '/icons/certificate.png';
