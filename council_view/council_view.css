@@ -43,9 +43,7 @@ body {
   width: 50%;
 }
 
-#toggle-heatmap{
-  color: black;
-}
+
 #status{
   color:black;
 }
@@ -53,24 +51,29 @@ body {
   color: black;
 }
 .buttonchoice {
-  border: 4px solid white;
-  display: inline-block;
+  display: block;
   margin-left: 20vw;
-  border-radius: 2.5vw;
   margin-top: 1vw;
   margin-bottom: 1vw;
-  width: 6.66vw;
-  height: 6.66vw;
+  width: 5vw;
+  height: 5vw;
+  
   transition: all 0.5s ease;
   position: relative;
 }
 .buttonchoice:hover {
   cursor: pointer;
-  border: 5px solid gold;
+  box-shadow: 0px 0px 5px 1px #696969;
 }
+
 .buttonpane{
   margin-left: auto;
   margin-right: auto;
+  position: absolute;
+  left:-19vw;
+  top:20vh;
+  margin-bottom:5vh;
+  
 }
 .findbin{
   border: 4px solid white;
@@ -96,42 +99,36 @@ body {
   width: 20vw;
 }
 #map {
-  height: 50vw;
-  width:90vw;
-  margin-left : 5vw;
+  height: 70vh;
+  width: 90vw;
+  margin-left : 7vw;
   margin-right : 5vw;
-  margin-top:1vw;
+  margin-top: 0.2vw;
   padding: 0;
 }
 
-#floating-panel {
-  position: absolute;
-  top: 2000px;
-  left: 50%;
-  z-index: 5;
-  background-color: #fff;
-  padding: 5px;
-  border: 1px solid #999;
-  text-align: center;
-  font-family: 'Roboto','sans-serif';
-  line-height: 30px;
-  padding-left: 10px;
-
-}
 
 #location-maps{
   display: none;
   color: black;
 }
 
-#floating-panel {
-  background-color: #fff;
-  border: 1px solid #999;
-  left: 0%;
-  padding: 5px;
-  position: absolute;
-  top: 10px;
-  z-index: 5;
+#floating-panel {  
+  margin-left: 7vw;
+  margin-right: 1vw;
+  margin-top: 8vh;
+  text-align: left;
+  font-family: 'Roboto','sans-serif';
+  width: 20vw;  
+}
+
+#toggle-heatmap{
+  border-radius: 1px;
+  color: #696969;  
+}
+
+#toggle-edit{
+  color: #696969;  
 }
 
 /* The popup form - hidden by default */
@@ -209,9 +206,10 @@ li {
   background-color: #8cc73e;
 }
 .stat-summary{
-  padding: 5vw;
   display: inline-block;
-  margin-left: 40vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 7vh;
 }
 #qr-codes{
   padding: 5vw;
@@ -270,18 +268,26 @@ li {
   border: 4px solid gold;
 }
 .statval{
-  color: #92a8d1;
+  color: #5a9600;
 }
 input[type=text], select, textarea {
   width: 100%; 
   padding: 12px; 
   border: 1px solid #ccc;
   border-radius: 4px; 
-  box-sizing: border-box; 
-  margin-top: 6px; /* Add a top margin */ 
+  box-sizing: border-box;  
   
 }
 
+#name{
+	margin-bottom: 20px;
+	
+}
+
+#email{
+	margin-bottom: 20px;
+	
+}
 
 input[type=submit] {
   background-color: #4CAF50;
@@ -290,6 +296,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top:20px;
 }
 
 
@@ -302,9 +309,10 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  width:100%;
-  margin-left : -12vw;
+  width:auto;
+  margin-left : -34vw;
   margin-right : 5vw;
+  margin-top: -3vh;
 }
 
 .logo{
@@ -312,4 +320,3 @@ input[type=submit]:hover {
   right:0;
   bottom: 0;
 }
-
