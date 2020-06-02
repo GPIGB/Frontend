@@ -16,10 +16,10 @@
 	  <li><div class="topbar" href="" id="contact">Contact</div></li>
     </ul>
     <div class="stat-summary" id="homescreen">
-	  <h1>Weekly Statistics</h1>
-      <p>recycled last week: <span class="statval" id="last-week-stat">9</span> m2 </p>
-      <p>total recycled: <span class="statval" id="tot-stat">198</span> m2</p>
-      <p> estimated recycling ratio: <span class="statval" id="ratio-stat">68</span> % </p>
+	  <h1>Status</h1>
+      <p>Total Recycled This Week: <span class="statval" id="last-week-stat">1,205.49</span> tonnes</p>
+      <p>Total Recycled This Year: <span class="statval" id="tot-stat">281,539.28</span> tonnes</p>
+      <p>Estimated Percentage of Waste Recycled: <span class="statval" id="ratio-stat">44.9</span> %</p>
     </div>
     <script src="http://cdn.plot.ly/plotly-latest.min.js"></script>
     <div id="timegraph" style="position: absolute;left: -60px;top: 90px;"></div>
@@ -76,14 +76,15 @@
   <div id="location-maps">
     <h1 id='h1'>York Bin Map</h1>
     <div class = "buttonpane">
+	<img id = general class = "buttonchoice" src="/icons/general.png" onclick="general_markers();"></button>
     <img id = paper class = "buttonchoice" src="/icons/paper.png" onclick="paper_markers();"></button>
     <img id = plastic class = "buttonchoice" src="/icons/plastic.png" onclick="plastic_markers();"></button>
-    <img id = general class = "buttonchoice" src="/icons/general.png" onclick="general_markers();"></button>
+    
   </div>
     <div class="gmap">
       <div id="floating-panel">
         <button id="toggle-heatmap" onclick="toggleHeatmap()">Toggle Heatmap</button>
-        <button id="toggle-edit" onclick="toggleEdit()">Edit map</button>
+        <button id="toggle-edit" onclick="toggleEdit()">Edit Bin Marker</button>
       </div>
       <div id="map"></div>
       <script src="council_map.js"></script>
@@ -99,9 +100,9 @@
       ?>
       <form action="#" class="form-container" method="post">
       <!-- <div class="form-container" id="container"> -->
-        <h1 style="color:black;">Marker Edit</h1>
-        <p>Select Bin Type</p>
-        <br>
+        <h2 style="color:black;font-size:150%">Edit Bin Marker</h2>
+        <p>Select Bin Type:</p>
+        
         <input type="radio" id="paper_radio" name="type" value="paper">
         <label for="paper">Paper</label><br>
         <input type="radio" id="plastic_radio" name="type" value="plastic">
