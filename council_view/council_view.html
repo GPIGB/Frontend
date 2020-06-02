@@ -6,29 +6,34 @@
     <link rel="stylesheet" href="council_view.css">
   </head>
   <body>
-    <ul class ="bartop">
+    <ul class = "bartop">
       <li><div class="topbar" href="" id="home">Home</div></li>
       <li><div class="topbar" href="" id="binmap">Binmap</div></li>
-      <li><div class="topbar" href="" id="timeline">Timeline</div></li>
-      <li><div class="topbar" href="" id="contact">Contact</div></li>
+      <li><div class="topbar" href="" id="timeline">Timeline</div></li>      
       <li><div class="topbar" href="" id="qr">QR codes</div></li>
       <li><div class="topbar" href="" id="certificate">Certificate</div></li>
       <li><div class="topbar" href="" id="about">About</div></li>
+	  <li><div class="topbar" href="" id="contact">Contact</div></li>
     </ul>
     <div class="stat-summary" id="homescreen">
+	  <h1>Weekly Statistics</h1>
       <p>recycled last week: <span class="statval" id="last-week-stat">9</span> m2 </p>
       <p>total recycled: <span class="statval" id="tot-stat">198</span> m2</p>
       <p> estimated recycling ratio: <span class="statval" id="ratio-stat">68</span> % </p>
     </div>
     <script src="http://cdn.plot.ly/plotly-latest.min.js"></script>
     <div id="timegraph" style="position: absolute;left: -60px;top: 90px;"></div>
-    <div id="qr-codes">
-      right click the links and select save as to save the QR image
-      <p>  <a class="qrlink" href="/icons/QRpaper.png">paper</a></p>
-      <p><a class="qrlink" href="/icons/QRplastic.png">plastic</a></p>
-      <p><a class="qrlink" href="/icons/QRgeneral.png">general</a></p>
+    <div id="qr-codes" >
+	  <h1>Material QR Codes</h1>
+      These QR codes link to the York Bin Map showing the relevant bins for that material.
+	  To save them to your computer, click the links then right-click the image and and select "Save As":
+	  <p><a class="qrlink" href="/icons/QRgeneral.png">General</a></p>
+      <p><a class="qrlink" href="/icons/QRpaper.png">Paper</a></p>
+      <p><a class="qrlink" href="/icons/QRplastic.png">Plastic</a></p>
+      
     </div>
     <div id="contact-text">
+	<h1>Contact Us</h1>
         <div class="container">
 	    <form action="action_page.php">
          <label for="name">Name</label>
@@ -43,10 +48,19 @@
      </div>
     </div>
     <div id="about-text">
-      The YORBIN projet aims for better management of waste in york.<p></p> It's been developed since january 2020 by students at the university of York
-      The solution has different views aimed at different Customers.<p></p> The Visitors are able to use our system to find the closest appropriate bin to them,
-      businesses can monitor their recycling waste,<p></p> get printable QR codes and certificates, while the City Council will be able to maintain
-      an optimal positioning of bins troughout the city,<p></p> making use of the latest machine learning technologies.
+	<h1>About Us</h1>
+      <p>The YorBin project aims for better management of waste in York. This project was launched in January 2020 and is being developed by a group of 
+	     students from the University of York Computer Science department. This solution is a three-part system consisting of sections for use by 
+		 York City Council, local businesses, and visitors to the city. Visitors who wish to recycle something but are unsure of where the relevant bins are
+		 located, are able to use the system to find directions to nearby bins of the relevant type using Google Maps. 
+		 Local businesses are provided with printable QR codes that can be attacthed to the packaging of their products, which when 
+         scanned will direct the user to the nearest bin where they can recycle that packaging. Through this system, businesses are able to monitor how much
+		 of their waste gets correctly recycled by customers, and thus their impact on the environment within York.
+		 York City Council are provided with a variety of tools and data to enable them to properly and efficiently place, maintain, and empty bins within the
+		 city. Much of this data comes from the use of the latest Machine Learning technologies.
+		
+       <div><img id="recycling-img" src="/icons/recycling.jpg" href="/icons/recycling.jpg" alt="Recycling in York"></div>		
+		
     </div>
       <img id="certificate-img" class="clickable" src="/icons/certificate.png" href="/icons/certificate.png" alt="">
 
