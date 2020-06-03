@@ -47,6 +47,8 @@ function showTimeline(){
   document.querySelector('#certificate-img').style.display="none";
   document.querySelector('#certificate-form').style.display="none";
   document.querySelector('#about-text').style.display="none";
+  document.querySelector('#cert-title').style.display="none";
+  document.querySelector('#time-title').style.display="block";
 }
 function goHome(){
   document.querySelector('#homescreen').style.display="inline-block";
@@ -57,6 +59,8 @@ function goHome(){
   document.querySelector('#certificate-form').style.display="none";
   document.querySelector('#contact-text').style.display="none";
   document.querySelector('#about-text').style.display="none";
+  document.querySelector('#cert-title').style.display="none";
+  document.querySelector('#time-title').style.display="none";
 }
 function showQRcodes(){
   document.querySelector('#homescreen').style.display="none";
@@ -67,6 +71,8 @@ function showQRcodes(){
   document.querySelector('#contact-text').style.display="none";
   document.querySelector('#certificate-img').style.display="none";
   document.querySelector('#about-text').style.display="none";
+  document.querySelector('#cert-title').style.display="none";
+  document.querySelector('#time-title').style.display="none";
 }
 function contactUs(){
   document.querySelector('#homescreen').style.display="none";
@@ -77,6 +83,8 @@ function contactUs(){
   document.querySelector('#contact-text').style.display="inline-block";
   document.querySelector('#about-text').style.display="none";
   document.querySelector('#certificate-img').style.display="none";
+  document.querySelector('#cert-title').style.display="none";
+  document.querySelector('#time-title').style.display="none";
 }
 function aboutUs(){
   document.querySelector('#homescreen').style.display="none";
@@ -87,6 +95,8 @@ function aboutUs(){
   document.querySelector('#about-text').style.display="inline-block";
   document.querySelector('#certificate-img').style.display="none";
   document.querySelector('#location-maps').style.display="none";
+  document.querySelector('#cert-title').style.display="none";
+  document.querySelector('#time-title').style.display="none";
 }
 function showCertificate(){
   document.querySelector('#homescreen').style.display="none";
@@ -97,6 +107,8 @@ function showCertificate(){
   document.querySelector('#location-maps').style.display="none";
   document.querySelector('#about-text').style.display="none";
   document.querySelector('#certificate-img').style.display="block";
+  document.querySelector('#cert-title').style.display="block";
+  document.querySelector('#time-title').style.display="none";
 }
 function showMap(){
   document.querySelector('#homescreen').style.display="none";
@@ -107,6 +119,8 @@ function showMap(){
   document.querySelector('#contact-text').style.display="none";
   document.querySelector('#certificate-img').style.display="none";
   document.querySelector('#location-maps').style.display="block";
+  document.querySelector('#cert-title').style.display="none";
+  document.querySelector('#time-title').style.display="none";
 }
 function pritCert() {
   window.location.href = '/icons/certificate.png';
